@@ -107,7 +107,7 @@ def main():
             st.session_state.model_trained = False
             if train_new_model():
                 st.success("Model retrained successfully!")
-                st.rerun()
+                # st.rerun()
             else:
                 st.error("Failed to retrain model")
         
@@ -203,7 +203,7 @@ def main():
         for example in examples:
             if st.button(f"'{example[:30]}...'", key=f"example_{hash(example)}", help=example):
                 st.session_state.example_text = example
-                st.rerun()
+                # st.rerun()
         
         # Handle example text
         if 'example_text' in st.session_state:
